@@ -41,7 +41,6 @@ class wordle_solver:
 
 
     def get_word_score(self, word, compatible_words):
-        print(word)
         score = 0
         for target in compatible_words:
             if target == word:
