@@ -1,4 +1,4 @@
-## wordle
+## Wordle solver
 
 Python scripts to help solve [Wordle](https://www.powerlanguage.co.uk/wordle/) puzzles.
 
