@@ -3,6 +3,7 @@
 
 
 import json
+import pandas
 
 
 class wordle_solver:
@@ -33,7 +34,10 @@ class wordle_solver:
         compatible_words = self.list_compatible_words(words=self.words, info=self.information)
         scores = [self.get_word_score(word, compatible_words) for word in compatible_words]
         scores, compatible_words =  zip(*sorted(zip(scores, compatible_words)))
-        return compatible_words, scores
+        df = pandas.DataFrame({'Word': compatible_words, 'SumScore': scores})
+        df['AvgScore'] = df['SumScore'].values / len(df['Word'])
+        df.set_index('Word', inplace=True)
+        return df
 
 
     def get_empty_information(self):

@@ -9,10 +9,7 @@ from wordle_solver import wordle_solver
 
 
 ws = wordle_solver()
-words, scores = ws.get_compatible_word_scores()
-
-df = pandas.DataFrame({'Word': words, 'SumScore': scores})
-df['AvgScore'] = df['SumScore'].values / len(df['Word'])
+df = ws.get_compatible_word_scores()
 
 with open('data/a_priori_scores.txt', 'w') as ofile:
 
