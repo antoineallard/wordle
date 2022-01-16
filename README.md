@@ -1,11 +1,9 @@
 ## Wordle solver
 
-Python scripts to help solve [Wordle](https://www.powerlanguage.co.uk/wordle/) puzzles.
+Python scripts to help solve [Wordle](https://www.powerlanguage.co.uk/wordle/) puzzles.  See the [notebook](wordle_solver_example.ipynb) for details and examples.
 
-See the [notebook](wordle_solver_example.ipynb) for details and examples.
-
-
-#### See also other approaches
+<br><br>
+Several people have also taken a crack at Wordle!
 
 <https://gist.github.com/scarpino/eb2f58745bab14417a6bca4955cf1f9c><br>
 <http://estebanmoro.org/post/2022-01-10-wordle/><br>
