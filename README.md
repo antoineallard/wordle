@@ -7,10 +7,8 @@ See the [notebook](wordle_solver_example.ipynb) for details and examples.
 
 
 
-#### Other resources
+#### Other approaches
 
-
-See also:<br>
 <https://gist.github.com/scarpino/eb2f58745bab14417a6bca4955cf1f9c><br>
 <http://estebanmoro.org/post/2022-01-10-wordle/><br>
 <https://bert.org/2021/11/24/the-best-starting-word-in-wordle/><br>
