@@ -54,7 +54,7 @@ class wordle_solver:
 
     # Extract the word list from https://www.powerlanguage.co.uk/wordle/main.814b2d17.js (array Ta=[...], downloaded on Jan 10th, 2022).
     # This function is very specific to that file. Inspection of the file is required should it be replaced by a more up-to-date one.
-    def load_possible_words(self, fname='main.814b2d17.js', start='Ta=', stop=',Ca='):
+    def load_possible_words(self, fname='data/main.814b2d17.js', start='Ta=', stop=',Ca='):
         with open(fname, 'r') as file:
             line = file.readline()
             line = line.split(start)[1].split(stop)[0]
