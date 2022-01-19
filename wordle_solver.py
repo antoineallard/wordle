@@ -73,28 +73,43 @@ class wordle_solver:
 
     def update_information(self, word, result, info=None):
         info = self.information if info is None else info
-        wrong_position = ''
+
         known_positions = list(info['known_positions'])
         for i in range(5):
             if result[i] == 'g':
                 if word[i] not in info['include_letters']:
                     info['include_letters'].append(word[i])
                 known_positions[i] = word[i]
-            if result[i] == 'b':
-                if word[i] not in info['exclude_letters']:
-                    if word[i] not in info['include_letters']:
-                        info['exclude_letters'].append(word[i])
+        info['known_positions'] = ''.join(known_positions)
+
+        wrong_position = ''
+        for i in range(5):
             if result[i] == 'y':
                 if word[i] not in info['include_letters']:
                     info['include_letters'].append(word[i])
                 wrong_position += word[i]
             else:
                 wrong_position += '*'
-        info['known_positions'] = ''.join(known_positions)
         if wrong_position != '*****':
             info['wrong_positions'].append(wrong_position)
 
+        wrong_position = ''
+        for i in range(5):
+            if result[i] == 'b':
+                if word[i] not in info['exclude_letters']:
+                    if word[i] not in info['include_letters']:
+                        info['exclude_letters'].append(word[i])
+                        wrong_position += '*'
+                    else:
+                        wrong_position += word[i]
+                else:
+                    wrong_position += '*'
+            else:
+                wrong_position += '*'
+        if wrong_position != '*****':
+            info['wrong_positions'].append(wrong_position)
 
+        
     def validate_word(self, word, solution):
         word = list(word)
         solution = list(solution)
