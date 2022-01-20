@@ -17,5 +17,6 @@ https://github.com/basile-henry/twitter-wordle
 
 
 <br><br>
-Missed yesterday's puzzle? There you go!<br>
+Missed yesterday's puzzle? There you go!
+
 https://www.devangthakkar.com/wordle_archive/
